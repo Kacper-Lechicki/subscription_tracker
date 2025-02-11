@@ -34,4 +34,4 @@ subscriptionRouter.get("/upcoming-renewals", (req, res) =>
   res.send({ title: "GET upcoming renewals" }),
 );
 
-export default subscriptionRouter;
+export { subscriptionRouter };
