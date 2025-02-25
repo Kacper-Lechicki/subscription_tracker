@@ -2,7 +2,8 @@
 
 ### 🎯 **Goal**:
 
-This project is designed to practice Node.js / Express.js and BE development skills.
+This project is designed to practice Node.js / Express.js and BE development
+skills.
 
 ### 🛠️ **Tools**:
 
