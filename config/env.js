@@ -1,5 +1,8 @@
-import { config } from 'dotenv'
+import { config } from 'dotenv'; // Importing dotenv package to load environment variables
 
-config({ path: `.env.${process.env.NODE_ENV || 'development'}.local` })
+// Load the appropriate `.env` file based on the NODE_ENV value, defaulting to 'development'
+config({ path: `.env.${process.env.NODE_ENV || 'development'}.local` });
 
-export const { PORT, NODE_ENV, DB_URI } = process.env
+// Export environment variables for use throughout the application
+export const { PORT, NODE_ENV, DB_URI, JWT_SECRET, JWT_EXPIRES_IN } =
+  process.env; // Destructure and export specific environment variables

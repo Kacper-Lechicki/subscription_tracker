@@ -1,11 +1,18 @@
-import { Router } from 'express'
+import { Router } from 'express';
+import { signIn, signOut, signUp } from '../controllers/auth.controller.js';
 
-const authRouter = Router()
+const authRouter = Router(); // Create a new router instance for authentication-related routes
 
-authRouter.post('/sign-up', (req, res) => res.send({ title: 'Sign up' }))
+// Route for user sign-up
+authRouter.post('/sign-up', signUp);
+// Calls the `signUp` controller function to handle user registration
 
-authRouter.post('/sign-in', (req, res) => res.send({ title: 'Sign in' }))
+// Route for user sign-in
+authRouter.post('/sign-in', signIn);
+// Calls the `signIn` controller function to handle user login
 
-authRouter.post('/sign-out', (req, res) => res.send({ title: 'Sign out' }))
+// Route for user sign-out
+authRouter.post('/sign-out', signOut);
+// Calls the `signOut` controller function to handle user logout
 
-export { authRouter }
+export { authRouter };
